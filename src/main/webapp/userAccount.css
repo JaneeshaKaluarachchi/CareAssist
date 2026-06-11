@@ -1,0 +1,166 @@
+/* General Styling */
+body {
+    font-family: 'Saira', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* User Info Section */
+.user-info {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 75%;
+    max-width: 900px;
+    transition: all 0.3s ease;
+}
+
+.user-info:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.user-info h2 {
+    text-align: center;
+    color: #009688;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.user-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 15px 0;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+.user-info p:hover {
+    color: #009688;
+}
+
+.user-info span {
+    font-weight: bold;
+    color: #009688;
+}
+
+/* Table Styling */
+
+table {
+    width: 80%;
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+table th, table td {
+    padding: 18px;
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+}
+
+table th {
+    background-color: rgb(94, 87, 168);
+    color: white;
+    font-weight: 600;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+table tr:hover td {
+    background-color: #e0f2f1;
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table td {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animations to the whole page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.user-info, table {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #009688;
+    padding: 15px;
+    color: white;
+    font-size: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-info {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+    
+  
+}

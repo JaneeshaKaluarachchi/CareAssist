@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/* General Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+body a{
+	text-decoration: none;
+	color:white;
+}
+/* Logo */
+.logo img {
+    max-height: 50px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-family: 'Saira';
+    font-weight: 500;
+
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 40px; /* Adjust to align with the parent link */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+    z-index: 10; /* Ensure the dropdown is above other content */
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    display: block;
+}
+
+/* Add a class to show the dropdown when clicked */
+.dropdown-menu.show {
+    display: block; /* Show the menu when the 'show' class is added */
+}
+
+/* Show dropdown menu on hover (Desktop) */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ☰ Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    display: block; /* Always visible */
+}
+
+/* Sidebar (☰ Menu) */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    opacity: 0;
+    z-index: -1; /* Initially hidden */
+}
+
+.sidebar.open {
+    width: 250px;
+    opacity: 1;
+    z-index: 1000; /* When open, bring it to the front */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; /* Add horizontal line between links */
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Consult Now Button */
+.consult-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Saira';
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.consult-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styling */
+.consult-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navbar links on mobile */
+    }
+
+    .menu-icon {
+        display: block; /* Show ☰ icon on mobile */
+    }
+
+    .sidebar {
+        width: 0; /* Hidden by default */
+    }
+
+    .sidebar.open {
+        opacity: 1;
+        width: 250px;
+    }
+
+    /* Navbar links inside sidebar */
+    #sidebar-links .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ensure dropdown appears inside the sidebar on mobile */
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        box-shadow: none; /* Remove shadow on mobile */
+        border: none;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+    .nav-links {
+        display: flex; /* Show navbar links on desktop */
+    }
+
+    /* Hide navbar links in sidebar on desktop */
+    .sidebar ul {
+        display: block; /* Only show extra links on desktop */
+    }
+
+    .sidebar .nav-links {
+        display: none; /* Ensure navbar links are hidden inside the sidebar on desktop */
+    }
+}
+
+
+
+
+
+
+
+.dashul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #007bff;
+}
+
+.dashli {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    font-family: 'saira', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dashli:last-child {
+    border-right: none;
+}
+
+.dashli i {
+    font-size: 18px;
+}
+
+/* Hover effect */
+.dashli:hover {
+    background-color: #005bb5;
+    color: #ffd700; /* gold or any highlight color */
+}
+
+/* Responsive: only icons on mobile */
+@media (max-width: 768px) {
+    .dashli span {
+        display: none;
+    }
+
+    .dashli {
+        font-size: 0;
+    }
+
+    .dashli i {
+        font-size: 20px;
+    }
+}

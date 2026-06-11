@@ -1,0 +1,640 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display:contents;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+		
+		
+        @font-face {
+        font-family: 'AvenirNextBold';
+        src: url('fonts/AvenirNext-Bold.ttf') format('truetype');
+        font-weight: bolder;
+        font-style: normal;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            max-width: 90%;
+            
+            padding: 20px;
+            
+        }
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+        .image-section img {
+            width: 100%;
+            max-width: 500px;
+        }
+        .text-section {
+            flex: 1;
+            padding-left: 20px;
+            text-align: center;
+        }
+        .title {
+            font-size:  3.2rem;
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: left;
+            font-family: 'AvenirNextBold';
+        }
+        
+        .title .highlight {
+            color: #2e8bc0;
+            font-size: 3.8rem;
+        }
+        
+        .title .emphasis {
+            color: #145374;
+            font-size: 3.5rem;
+        }
+        
+        .paragraph {
+            font-size: 20px;
+            font-weight: 300; /* Thin font weight */
+            color: #555;
+            margin-top: 10px;
+            text-align: left;
+            font-family: 'Saira';
+        }
+        .buttons {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: 'Saira';
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+        }
+        .ticket-btn {
+            background-color: rgb(197, 2, 2);
+            color: white;
+            
+            width: 500px;
+        }
+        .signup-btn {
+            background-color: rgb(197, 197, 0);
+            color: black;
+            border: 1px solid #ccc;
+            
+            width: 120px;
+        }
+
+        /* Mobile View (Stacked Layout) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                
+            }
+            .text-section {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            .title{
+                margin-left: 40px;
+                /* font-size:  2.8 rem; */
+                /* max-width: 80%; */
+
+            }
+            .paragraph{
+                margin-left: 10px;
+                padding: 15px;
+            }
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .buttons a {
+                width: 70%;
+                text-align: center;
+            }
+
+            
+        }
+
+
+
+
+
+
+
+
+        .consult-container {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            background-color: #f6b52d;
+        }
+
+        .consult-title {
+            font-size: 45px;
+            margin-bottom: 30px;
+            font-family:'AvenirNextBold' ;
+        }
+
+        .consult-title .highlight {
+            color: #000000;
+            font-size: 3.8rem;
+        }
+        
+        .consult-title .emphasis {
+            color: #e90000;
+            font-size: 3.5rem;
+        }
+
+        .consult-content {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        /* Step Group */
+        .consult-steps-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        /* Step Item */
+        .consult-step-item {
+            display: flex;
+            align-items: center; /* Vertically center step-number with step-text */
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        /* Step Number */
+        .step-number {
+            font-size: 48px;
+            font-weight: bold;
+            width: 30px;
+            text-align: center;
+            line-height: 1.2;
+            margin-right: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Vertically center number */
+        }
+
+        /* Step Text */
+        .step-text {
+            flex: 1;
+            margin: 0;
+            line-height: 1.5;
+            font-family: 'Saira';
+            text-align: left;
+            font-size: 20px;
+        }
+
+        /* Phone Image Section */
+        .consult-phone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .consult-phone img {
+            height: 500px;
+            border-radius: 15px;
+            /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+        }
+
+        /* Right Group (Includes Button) */
+        .consult-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        /* Button */
+        .consult-button {
+            background-color: white;
+            font-family: 'Saira';
+            color: #f6b52d;
+            border: none;
+            padding: 8px 25px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .consult-button:hover {
+            background-color: #fef3da;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .consult-title {
+                font-size: 24px;
+            }
+
+            .consult-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .consult-steps-group,
+            .consult-right {
+                align-items: center;
+                text-align: center;
+            }
+
+            .consult-step-item {
+                justify-content: center;
+                text-align: left;
+            }
+
+            .step-text {
+                text-align: left;
+            }
+
+            .consult-phone img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .consult-title {
+                font-size: 22px;
+            }
+
+            .consult-phone img {
+                height: 200px;
+            }
+
+            .consult-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+
+
+
+
+
+
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f0f0f0;
+        padding: 20px;
+        }
+
+        .cao-section {
+        display: flex;
+        flex-wrap: wrap;
+        background: white;
+        overflow: hidden;
+        /* border-radius: 10px; */
+        /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+        }
+
+        /* Box base styling */
+        .cao-box {
+        flex: 1 1 50%;
+        position: relative;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        /* Background gradients
+        .cao-box.pharmacy {
+        background: linear-gradient(to bottom right, #8dd637, #4caf50);
+        color: white;
+        z-index: 1;
+        overflow: visible;
+        }
+
+        .cao-box.labs {
+        background: linear-gradient(to bottom right, #8dd637, #66bb6a);
+        color: white;
+        text-align: right;
+        overflow: hidden;
+        } */
+
+        /* Optional image backgrounds */
+        .cao-box.pharmacy {
+        background: linear-gradient(rgba(55, 116, 214, 0.5), rgba(99, 13, 149, 0.5)),
+                    url('assert/pharmacy-bg.png') no-repeat center/cover;
+        }
+        .cao-box.labs {
+        background: linear-gradient(rgba(214, 55, 55, 0.5), rgba(139, 34, 2, 0.5)) ,
+                    url('assert/labs-bg.png') no-repeat center/cover;
+        }
+
+
+        .cao-content {
+        max-width: 500px;
+        width: 100%;
+        }
+
+        /* Headings and paragraphs */
+        .cao-box h2 {
+        font-size: 48px;
+        font-family:'AvenirNextBold' ;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
+        }
+
+        .cao-box p {
+        font-size: 20px;
+        font-family: 'Saira';
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+        }
+
+        /* Actions (Read More + Button) */
+        .cao-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        }
+
+        .read-more {
+        color: rgb(132, 255, 0);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        font-family:'saira' ;
+        }
+
+        .read-more:hover {
+        text-decoration: underline;
+        }
+
+        .btn.dark {
+        background: #02032b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        width: 50%;
+        }
+
+        .btn.dark:hover {
+        background: #000;
+        }
+
+        /* Angled divider between boxes (only on desktop) */
+        .cao-box.pharmacy::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -35px;
+        width: 70px;
+        height: 100%;
+        background: white;
+        transform: skewX(-20deg);
+        z-index: 2;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CAO Labs button alignment */
+        .cao-box.labs .cao-actions {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        }
+
+        /* Responsive styles for tablets & mobile */
+        @media (max-width: 768px) {
+        .cao-box {
+            flex: 1 1 100%;
+            padding: 25px 20px;
+        }
+
+        .cao-box.pharmacy::after {
+            display: none;
+        }
+
+        .cao-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .cao-box.labs {
+            text-align: right;
+        }
+
+        .cao-box.labs .cao-actions {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .read-more, .btn.dark {
+            width: 100%;
+            text-align: center;
+        }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* Base resets */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+} */
+
+/* Review Section Container */
+.review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+/* Section Title */
+.review-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Swiper Container */
+.swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 20px;
+  overflow: hidden; /* Hides scrollbars or cut cards */
+
+}
+
+/* Slide Styling */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Review Card */
+.review-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 330px;
+  height: 360px;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Star Rating */
+.stars {
+  font-size: 1.4rem;
+  color: #ffbf00;
+  margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-message {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #444;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+/* Reviewer Name */
+.review-name {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+/* Review Date */
+.review-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .review-card {
+    max-width: 290px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-section h2 {
+    font-size: 2rem;
+  }
+
+  .review-card {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .review-message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-section {
+    padding: 30px 10px;
+  }
+
+  .review-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .review-card {
+    padding: 18px;
+  }
+
+  .review-message {
+    font-size: 0.9rem;
+  }
+}
+
+
+body a{
+	text-decoration: none;
+	color:white;
+}
